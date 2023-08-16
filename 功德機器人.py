@@ -18,7 +18,6 @@ async def on_ready():
 @bot.command()
 async def pray(ctx):
     await ctx.send(data['pray'])
-
 @bot.command()
 async def image(ctx):
     await ctx.send(file=discord.File(data['image']))
