@@ -16,7 +16,8 @@ seafood=data["monk"]
 @bot.event
 async def on_ready():
     print("Bot is ready")
-
+    game = discord.Game(data["now"])  
+    await bot.change_presence(status=discord.Status.idle, activity=game)
 @bot.command()
 async def pray(ctx):
     await ctx.send(data['pray'])
